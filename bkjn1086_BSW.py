@@ -79,7 +79,7 @@ def GetSuccessRate():
 
 
 if __name__ == "__main__":
-    setrecursionlimit(1000000)
+    #setrecursionlimit(1000000)
     GetInputs()
     success_cnt, total_case = GetSuccessRate()
     div = gcd(success_cnt, total_case)
