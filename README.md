@@ -1,4 +1,4 @@
 # Algorithm_study
-Repository for backjun algorithm study.
+Repository for backjoon algorithm study.
 
 Language : python
