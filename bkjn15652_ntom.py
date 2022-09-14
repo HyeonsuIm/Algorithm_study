@@ -13,7 +13,6 @@ def solve(data_cnt, finish_cnt, position, selected_list, selected_cnt):
 
     selected_list[position] += 1
     solve(data_cnt, finish_cnt, position, selected_list, selected_cnt+1)
-    #solve(data_cnt, finish_cnt, position+1, selected_list, selected_cnt+1)
     selected_list[position] -= 1
     solve(data_cnt, finish_cnt, position+1, selected_list, selected_cnt)
     
