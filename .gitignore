@@ -127,10 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-tempCodeRunnerFile.cpp
 .vscode/launch.json
 .vscode/settings.json
 .vscode/tasks.json
-bkjn1.dSYM/Contents/Info.plist
-bkjn1.dSYM/Contents/Resources/DWARF/bkjn1
-.DS_Store
+*.bin
+nvr_*
+*.plist
