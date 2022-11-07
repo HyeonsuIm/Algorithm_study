@@ -133,3 +133,4 @@ dmypy.json
 *.bin
 nvr_*
 *.plist
+cpp/main.cpp
