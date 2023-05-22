@@ -30,15 +30,7 @@ vector<vector<int>> multiply(vector<vector<int>>& val, long long multi)
 {
     if(multi == 1)
     {
-        vector<vector<int>> temp = val;
-        for(int i=0;i<N;i++)
-        {
-            for(int j=0;j<N;j++)
-            {
-                temp[i][j] %= 1000;
-            }
-        }
-        return temp;
+        return val;
     }
     else
     {
@@ -64,6 +56,7 @@ int main()
         for(int j=0;j<N;j++)
         {
             cin >> matrix[i][j];
+            matrix[i][j] %= 1000;
         }
     }
 
