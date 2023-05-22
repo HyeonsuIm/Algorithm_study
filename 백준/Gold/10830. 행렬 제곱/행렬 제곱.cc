@@ -30,13 +30,12 @@ vector<vector<int>> multiply(vector<vector<int>>& val, long long multi)
 {
     if(multi == 1)
     {
-        vector<vector<int>> temp(N);
+        vector<vector<int>> temp = val;
         for(int i=0;i<N;i++)
         {
-            temp[i].resize(N);
             for(int j=0;j<N;j++)
             {
-                temp[i][j] = val[i][j] % 1000;
+                temp[i][j] %= 1000;
             }
         }
         return temp;
@@ -73,15 +72,8 @@ int main()
     {
         for(int x=0;x<N;x++)
         {
-            cout << result[y][x];
-            if(x != N-1)
-            {
-                cout << " ";
-            }
+            cout << result[y][x] << " ";
         }
-        if( y!=N-1)
-        {
-            cout << endl;
-        }
+        cout << endl;
     }
 }
