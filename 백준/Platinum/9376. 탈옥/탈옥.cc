@@ -39,7 +39,7 @@ vector<vector<int>> MakeMoveMap(vector<vector<char>>& map, int y, int x)
     vector<vector<int>> visitedCost(h);
     for(int y=0;y<h;y++)
     {
-        visitedCost[y].assign(w,0x7fffffff);
+        visitedCost[y].assign(w,INVALID_COST);
     }
     priority_queue<Expand> pq;
     pq.push({0,y,x});
@@ -50,9 +50,6 @@ vector<vector<int>> MakeMoveMap(vector<vector<char>>& map, int y, int x)
         int y = pq.top().y;
         int x = pq.top().x;
         pq.pop();
-
-        if(visitedCost[y][x] < cost)
-            continue;
 
         for(int d=0;d<4;d++)
         {
