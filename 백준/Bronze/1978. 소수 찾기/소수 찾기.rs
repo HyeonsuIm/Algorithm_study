@@ -10,24 +10,15 @@ fn main() {
     let mut cnt = 0;
     for number in numbers
     {
-        let mut check:bool = true;
+        let mut match_cnt = 0;
         let val = number.parse::<i32>().unwrap();
-        if val > 2{
-            for i in 2..val-1{
-                if val % i == 0 {
-                    check=false;
-                    break;
-                }
+        for i in 1..val+1{
+            if val % i == 0 {
+                match_cnt+=1;
             }
         }
-        else if val==2{
-            check=true
-        }
-        else{
-            check=false
-        }
 
-        if check {
+        if match_cnt == 2 {
             cnt+=1
         }
     }
