@@ -1,6 +1,7 @@
 use std::io;
 use std::cmp;
 
+#[derive(Clone)]
 struct Item{
     weight:usize,
     cost:usize
@@ -11,13 +12,13 @@ fn main() {
     io::stdin().read_line(&mut str).unwrap();
     let numbers : Vec<usize> = str.split_whitespace().map(|x| x.parse().unwrap()).collect();
 
-    let mut items : Vec<Item> = Vec::new();
-    items.push(Item{weight:0,cost:0});
-    for _ in 0..numbers[0]{
+    let mut items = vec![Item { weight: (0), cost: (0) }; numbers[0]+1];
+    for i in 1..numbers[0]+1{
         str = String::new();
         io::stdin().read_line(&mut str).unwrap();
         let item_info : Vec<usize> = str.split_whitespace().map(|x| x.parse().unwrap()).collect();
-        items.push(Item{weight:item_info[0], cost:item_info[1]});
+        items[i].weight=item_info[0];
+        items[i].cost=item_info[1];
     }
 
     let mut dp = vec![vec![0;numbers[1]+1]; numbers[0]+1];
